@@ -4,8 +4,9 @@ var button = $('<button/>').html('Generate DGB Wallet').on('click', function(){
     const dgb = require('./node_modules/digibyte/index.js')
 
     var privateKey = new dgb.PrivateKey();
-    var address = privateKey.toAddress();
-    
+    //var address = privateKey.toAddress(); 
+    var address = privateKey.toLegacyAddress();
+
     $("#privateKey").text(privateKey.toString())
     $("#publicKey").text(privateKey.toPublicKey().toString())
     $("#address").text(address.toString())
