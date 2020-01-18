@@ -28,6 +28,8 @@ const dgb = require('./node_modules/digibyte/index.js')
 ```
 var privateKey = new dgb.PrivateKey();
 var address = privateKey.toAddress();
+
+var address = privateKey.toLegacyAddress(); //для генерациии legacy адреса.
 ```
 
 Обычный читаемый вид можно получить через .toString():
